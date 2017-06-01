@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,77 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n2r-zl-ggB">
+                                <rect key="frame" x="16" y="65" width="343" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="ok3-l0-Xal"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDY-Qd-dmR">
+                                <rect key="frame" x="16" y="355" width="156.5" height="45"/>
+                                <color key="backgroundColor" red="0.2417326672" green="0.56531942759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="u0m-EW-6RU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <state key="normal" title="Descargar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhd-x8-2Cv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhJ-Hp-mpP">
+                                <rect key="frame" x="202.5" y="355" width="156.5" height="45"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lvF-L3-27U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <state key="normal" title="Borrar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ocd-7d-eTY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.oscargarrucho.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-HF-uMP">
+                                <rect key="frame" x="16" y="469" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fIW-Bq-Sc0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DDY-Qd-dmR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0nh-bX-Pn0"/>
+                            <constraint firstItem="DDY-Qd-dmR" firstAttribute="top" secondItem="n2r-zl-ggB" secondAttribute="bottom" constant="22" id="6bE-zq-3BP"/>
+                            <constraint firstItem="xhJ-Hp-mpP" firstAttribute="top" secondItem="n2r-zl-ggB" secondAttribute="bottom" constant="22" id="I22-24-q3b"/>
+                            <constraint firstItem="xhJ-Hp-mpP" firstAttribute="leading" secondItem="DDY-Qd-dmR" secondAttribute="trailing" constant="30" id="dj6-fr-dDS"/>
+                            <constraint firstItem="n2r-zl-ggB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="eS9-RQ-Dwq"/>
+                            <constraint firstItem="LiV-HF-uMP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="fwI-mU-BJA"/>
+                            <constraint firstItem="xhJ-Hp-mpP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jT0-6J-yBe"/>
+                            <constraint firstItem="DDY-Qd-dmR" firstAttribute="width" secondItem="xhJ-Hp-mpP" secondAttribute="width" id="jiP-gj-9ap"/>
+                            <constraint firstItem="n2r-zl-ggB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="kaK-UC-O0f"/>
+                            <constraint firstItem="LiV-HF-uMP" firstAttribute="top" secondItem="xhJ-Hp-mpP" secondAttribute="bottom" constant="69" id="u2n-Q5-br0"/>
+                            <constraint firstAttribute="trailing" secondItem="n2r-zl-ggB" secondAttribute="trailing" constant="16" id="xC7-JD-Wza"/>
+                            <constraint firstAttribute="trailing" secondItem="LiV-HF-uMP" secondAttribute="trailing" constant="16" id="xqe-NU-mKD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deleteBtn" destination="xhJ-Hp-mpP" id="ANX-0R-vft"/>
+                        <outlet property="downloadBtn" destination="DDY-Qd-dmR" id="HZt-ig-kpr"/>
+                        <outlet property="imageView" destination="n2r-zl-ggB" id="XiI-PI-90w"/>
+                        <outlet property="infoLabel" destination="LiV-HF-uMP" id="Ha8-dL-hyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

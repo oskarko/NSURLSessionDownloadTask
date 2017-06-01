@@ -110,6 +110,7 @@
 				TargetAttributes = {
 					550D2AD61ED46F3D002B4A74 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 74W24P3Z98;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,7 +275,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 74W24P3Z98;
 				INFOPLIST_FILE = DownloadTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.oscargarrucho.DownloadTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,7 +288,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 74W24P3Z98;
 				INFOPLIST_FILE = DownloadTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.oscargarrucho.DownloadTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,6 +316,7 @@
 				550D2AF01ED46F3D002B4A74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
